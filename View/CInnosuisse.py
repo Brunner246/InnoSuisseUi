@@ -13,6 +13,10 @@ class CInnosuisseDialog(QtWidgets.QDialog):
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
         self.ui.lab_edit.setText("Hello World")
+
+        if a_controller is None:
+            raise ValueError("controller is nullptr")
+
         self._m_controller = a_controller
 
         self.ui.pbn_click_me.clicked.connect(self._do_something)

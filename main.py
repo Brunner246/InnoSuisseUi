@@ -12,8 +12,10 @@ if __name__ == "__main__":
     lBusinessLogic: IController = CController()
     lDummyLogic: IController = CDummyController()
     lDummyLogic("controller instanced")
-
-    dialog = CInnosuisseDialog(lDummyLogic)
-    dialog.show()
-
-    sys.exit(app.exec_())
+    try:
+        lDialog = CInnosuisseDialog(lDummyLogic)
+        lDialog.show()
+        sys.exit(app.exec_())
+    except ValueError as e:
+        print(e)
+        sys.exit(1)
