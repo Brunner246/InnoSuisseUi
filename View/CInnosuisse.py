@@ -1,7 +1,7 @@
 from PySide2 import QtWidgets
 from PySide2.QtCore import (Slot,
                             Signal)
-from GeneratedUi.Ui_CInnosuisse import Ui_Dialog
+from View.GeneratedUi.Ui_CInnosuisse import Ui_Dialog
 from Interfaces.IController import IController
 
 
