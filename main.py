@@ -9,11 +9,9 @@ from View.CInnosuisse import CInnosuisseDialog
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
 
-    lBusinessLogic: IController = CController()
-    lDummyLogic: IController = CDummyController()
-    lDummyLogic("controller instanced")
+    lController: IController = CDummyController()  # CController()
     try:
-        lDialog = CInnosuisseDialog(lDummyLogic)
+        lDialog = CInnosuisseDialog(lController)
         lDialog.show()
         sys.exit(app.exec_())
     except ValueError as e:

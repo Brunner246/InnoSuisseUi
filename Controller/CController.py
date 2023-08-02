@@ -13,5 +13,3 @@ class CDummyController(IController):
     def do_something(self):
         print(__class__.__name__)
 
-    def __call__(self, *args, **kwargs):
-        print(args)
