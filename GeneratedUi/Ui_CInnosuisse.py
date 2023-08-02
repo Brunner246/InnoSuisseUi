@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'CInnosuisseKzUXyv.ui'
+## Form generated from reading UI file 'CInnosuissePFMdoP.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.10
 ##
@@ -18,27 +18,37 @@ class Ui_Dialog(object):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
         Dialog.resize(400, 300)
-        self.verticalLayout_3 = QVBoxLayout(Dialog)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.verticalLayout_2 = QVBoxLayout()
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_2.addItem(self.verticalSpacer)
-
-        self.verticalLayout = QVBoxLayout()
+        self.verticalLayout = QVBoxLayout(Dialog)
         self.verticalLayout.setObjectName(u"verticalLayout")
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.pbn_click_me = QPushButton(Dialog)
+        self.pbn_click_me.setObjectName(u"pbn_click_me")
+
+        self.horizontalLayout_3.addWidget(self.pbn_click_me)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_3.addItem(self.horizontalSpacer_2)
+
+
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
+
+        self.verticalSpacer = QSpacerItem(20, 190, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout.addItem(self.verticalSpacer)
+
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.label = QLabel(Dialog)
-        self.label.setObjectName(u"label")
+        self.lab_edit = QLabel(Dialog)
+        self.lab_edit.setObjectName(u"lab_edit")
 
-        self.horizontalLayout_2.addWidget(self.label)
+        self.horizontalLayout_2.addWidget(self.lab_edit)
 
-        self.lineEdit = QLineEdit(Dialog)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.led_text = QLineEdit(Dialog)
+        self.led_text.setObjectName(u"led_text")
 
-        self.horizontalLayout_2.addWidget(self.lineEdit)
+        self.horizontalLayout_2.addWidget(self.led_text)
 
 
         self.verticalLayout.addLayout(self.horizontalLayout_2)
@@ -49,35 +59,31 @@ class Ui_Dialog(object):
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
-        self.pushButton_2 = QPushButton(Dialog)
-        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.pbn_click = QPushButton(Dialog)
+        self.pbn_click.setObjectName(u"pbn_click")
 
-        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.horizontalLayout.addWidget(self.pbn_click)
 
-        self.pushButton = QPushButton(Dialog)
-        self.pushButton.setObjectName(u"pushButton")
+        self.pbn_cancel = QPushButton(Dialog)
+        self.pbn_cancel.setObjectName(u"pbn_cancel")
 
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.horizontalLayout.addWidget(self.pbn_cancel)
 
 
         self.verticalLayout.addLayout(self.horizontalLayout)
 
 
-        self.verticalLayout_2.addLayout(self.verticalLayout)
-
-
-        self.verticalLayout_3.addLayout(self.verticalLayout_2)
-
-
         self.retranslateUi(Dialog)
+        self.pbn_cancel.clicked.connect(Dialog.reject)
 
         QMetaObject.connectSlotsByName(Dialog)
     # setupUi
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Dialog", None))
-        self.label.setText(QCoreApplication.translate("Dialog", u"enter somethihng", None))
-        self.pushButton_2.setText(QCoreApplication.translate("Dialog", u"PushButton", None))
-        self.pushButton.setText(QCoreApplication.translate("Dialog", u"PushButton", None))
+        self.pbn_click_me.setText(QCoreApplication.translate("Dialog", u"click", None))
+        self.lab_edit.setText(QCoreApplication.translate("Dialog", u"enter somethihng", None))
+        self.pbn_click.setText(QCoreApplication.translate("Dialog", u"click me", None))
+        self.pbn_cancel.setText(QCoreApplication.translate("Dialog", u"Cancel", None))
     # retranslateUi
 

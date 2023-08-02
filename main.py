@@ -8,8 +8,12 @@ from View.CInnosuisse import CInnosuisseDialog
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
+
     lBusinessLogic: IController = CController()
     lDummyLogic: IController = CDummyController()
-    w = CInnosuisseDialog(lDummyLogic)
-    w.show()
+    lDummyLogic("controller instanced")
+
+    dialog = CInnosuisseDialog(lDummyLogic)
+    dialog.show()
+
     sys.exit(app.exec_())

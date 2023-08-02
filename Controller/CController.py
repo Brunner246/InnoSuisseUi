@@ -6,9 +6,12 @@ from Interfaces.IController import IController
 class CController(IController):
     # @override
     def do_something(self):
-        print("do_something")
+        print(__class__.__name__)
 
 
 class CDummyController(IController):
     def do_something(self):
-        print("dummy")
+        print(__class__.__name__)
+
+    def __call__(self, *args, **kwargs):
+        print(args)
