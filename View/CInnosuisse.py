@@ -12,7 +12,7 @@ class CInnosuisseDialog(QtWidgets.QDialog):
         super().__init__(aParent)
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
-        self.ui.lab_edit.setText("Hello World")
+        self.ui.lab_edit.setText(self.tr("Hello World"))
 
         if a_controller is None:
             raise ValueError("controller is nullptr")

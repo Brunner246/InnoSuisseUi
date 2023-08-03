@@ -12,3 +12,16 @@
 use ``` pyside2-uic```
 
 usage example ```pyside2-uic .\CInnosuisse.ui > .\GeneratedUi\Ui_CInnosuisse.py ```
+
+## Translation
+
+### create translation file
+
+use ``` pyside2-lupdate```
+
+usage example ```CInnosuisse.py -ts Translation_de.ts```
+
+### compile translation file
+use ``` pyside2-lrelease```
+
+usage example ```lrelease Translation_de.ts```
