@@ -8,16 +8,16 @@ from Interfaces.IController import IController
 class CInnosuisseDialog(QtWidgets.QDialog):
     textChanged = Signal(str)
 
-    def __init__(self, a_controller: IController, aParent=None):
+    def __init__(self, aController: IController, aParent=None):
         super().__init__(aParent)
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
         self.ui.lab_edit.setText(self.tr("Hello World"))
 
-        if a_controller is None:
+        if aController is None:
             raise ValueError("controller is nullptr")
 
-        self._m_controller = a_controller
+        self._mController = aController
 
         self.ui.pbn_click_me.clicked.connect(self._do_something)
         self.ui.pbn_click.clicked.connect(lambda: (print(self.ui.lab_edit.text()),
@@ -31,4 +31,4 @@ class CInnosuisseDialog(QtWidgets.QDialog):
         self.textChanged.emit("got edited")
 
     def _do_something(self):
-        self._m_controller.do_something()
+        self._mController.do_something()
